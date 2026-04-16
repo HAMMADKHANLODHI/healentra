@@ -2,6 +2,8 @@ import Image from "next/image";
 import HealthcareLandingPage from "./components/health";
 import type { Metadata } from "next";
 
+
+
 export const metadata: Metadata = {
   title: "Healentra | Complete Medical Practice Management & Care",
   description: "Healentra unifies care, billing, scheduling, and more in one platform. Connect with trusted healthcare professionals for online doctor consultations, primary care, and e-prescriptions.",
@@ -16,18 +18,25 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Healentra" }],
   
+  // This explicitly sets your browser tab icon
+  icons: {
+    icon: '/icon.png', 
+    shortcut: '/icon.png', 
+    apple: '/icon.png', 
+  },
+  
   openGraph: {
     type: "website",
-    url: "https://www.healentra.com", 
+    url: "https://healentra-seven.vercel.app/", 
     title: "Healentra | Complete Medical Practice Management",
     description: "One Platform to Power Your Entire Practice. Connect with doctors online, manage billing, and schedule appointments seamlessly.",
     siteName: "Healentra",
     images: [
       {
-        url: "https://www.healentra.com/og-image.jpg",
+        url: "https://healentra-seven.vercel.app/icon.png",
         width: 1200,
         height: 630,
-        alt: "Healentra Dashboard and Doctor Consultation",
+        alt: "Healentra Logo",
       },
     ],
     locale: "en_US",
@@ -37,7 +46,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Healentra | Complete Medical Practice Management",
     description: "One Platform to Power Your Entire Practice. Connect with doctors online, manage billing, and schedule appointments seamlessly.",
-    images: ["https://www.healentra.com/og-image.jpg"], 
+    // Fixed this link to match the openGraph link
+    images: ["https://healentra-seven.vercel.app/icon.png"], 
   },
 
   robots: {
@@ -53,6 +63,7 @@ export const metadata: Metadata = {
   },
 };
 
+// export default function Home() { ...
 export default function Home() {
   return (
     <main className="w-full h-full flex flex-col items-center justify-center">
